@@ -1,0 +1,10 @@
+<h1>My tasks</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <%= check_box "task", "completed", {:checked => task.completed, :disabled => true} %> <!-- how can this be a class -->
+    <%= link_to task.title, task_path(task) %>
+    <br>
+  <% end %>
+
+</ul>
