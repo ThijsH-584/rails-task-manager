@@ -2,11 +2,11 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <%= check_box "task", "completed", {:checked => task.completed, :disabled => true} %> <!-- how can this be a class -->
+    <%= check_box "task", "completed", {:checked => task.completed, :disabled => true, class: 'box'} %> <!-- how can this be a class -->
     <%= link_to task.title, task_path(task) %>
     <br>
   <% end %>
 
 </ul>
 
-<%= link_to 'Add new Task', tasks_path %>
+<%= link_to 'Add new Task', new_task_path %>
